@@ -38,17 +38,17 @@ public class UC_3_CompareTheTwoLines {
         System.out.println("Length of the line 2: "+length2);
 
         //Comparing both the lines.
-        String l1 = Double.toString(length1);
-        String l2 = Double.toString(length2);
+        Double l1 = length1;
+        Double l2 = length2;
         boolean equal = l1.equals(l2);
         System.out.println("Equality of two lines using Java equals method is: "+equal);
-        int comp = l2.compareTo(l1);
+        int comp = l1.compareTo(l2);
         System.out.println("Comparing two lines using Java compareTo method is: "+comp);
         if (comp > 0)
             System.out.println("Line-1 is greater than Line-2");
-        else if (comp < 0)
-            System.out.println("Line-1 is less than Line-2");
-        else
+        else if (comp == 0)
             System.out.println("Line-1 is equal to Line-2");
+        else
+            System.out.println("Line-1 is less than Line-2");
     }
 }
